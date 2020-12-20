@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add_student</title>
+    {% include 'students/cdnline.html' %}
+</head>
+<body>
+<style>
+    form{
+        border:1px grey solid;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 20px;
+        background-color: rgba(100,202,220,1);
+        box-shadow:0 0 20px red,0 0 20px black;
+    }
+    body{
+        background-color: blue;
+    }
+    .bt1{
+        margin-top: 10px;
+    }
+</style>
+<div class="container-fluid">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <form method="post" action="{% url 'save_data' %}">
+                <h1 class="text-center">Add Student Here</h1>
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Enter Student Name</label>
+                        <input type="text" name="sname" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Enter Class Name</label>
+                        <input type="text" name="cls" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Enter Section</label>
+                        <input type="text" name="section" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Enter School Name</label>
+                        <input type="text" name="school" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Enter Email Id</label>
+                        <input type="text" name="email" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Enter Mobile Number</label>
+                        <input type="text" name="mobile" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Enter Telugu Marks</label>
+                        <input type="text" name="telugu" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Enter Hindi Marks </label>
+                        <input type="text" name="hindi" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Enter English Marks</label>
+                        <input type="text" name="english" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Enter Math Marks</label>
+                        <input type="text" name="math" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Enter Science Marks</label>
+                        <input type="text" name="science" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Enter Social Science Marks</label>
+                        <input type="text" name="social" class="form-control">
+                    </div>
+                </div>
+                <center>
+                    <input type="submit" value="Add" class="btn btn-success bt1">
+                    <input type="reset" value="Clear" class="btn btn-danger bt1">
+                </center>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
